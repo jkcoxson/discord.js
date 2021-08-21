@@ -1,15 +1,15 @@
 'use strict';
 
-const EventEmitter = require('events');
+const EventEmitter2 = require('eventemitter2');
 const RESTManager = require('../rest/RESTManager');
 const Options = require('../util/Options');
 const Util = require('../util/Util');
 
 /**
  * The base class for all clients.
- * @extends {EventEmitter}
+ * @extends {EventEmitter2}
  */
-class BaseClient extends EventEmitter {
+class BaseClient extends EventEmitter2 {
   constructor(options = {}) {
     super();
 
